@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+    <title>Home Page</title>
+</head>
+<body>
+    <%- include('./patials/nav') %>
+
+    <div class="container mt-3 pt-3 gap-7">
+        <div class="row row-col-3">
+        <% blogs.forEach(blog => { %>
+            <div class="col">
+            <div class="card gap-4 mb-4" style="width: 18rem; height: 10rem;">
+                <img src="<%= blog.coverImageURL %>" class="card-img-top" alt="..."/>
+                <div class="card-body">
+                  <h5 class="card-title"><%= blog.title %></h5>
+                  <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+                </div>
+              </div>
+              </div>
+       <% }); %>
+        </div>
+
+    </div>
+    <%- include('script') %>
+</body>
+</html>

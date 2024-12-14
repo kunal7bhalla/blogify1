@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+    <title>Blog Page</title>
+</head>
+<body>
+    <%- include('./patials/nav') %>
+
+
+    <div class="card gap-4 mb-4 mx-auto mt-5" style="width: 20rem;">
+        <img src="/<%= blog.coverImageURL %>" class="card-img-top" alt="Blog Image">
+        <div class="card-body">
+          <h2 class="card-title"><%= blog.title %></h2>
+          <h5 class="mt-5"><%= blog.body %></h5>
+        </div>
+      </div>
+      
+
+    <%- include('script') %>
+</body>
+</html>
